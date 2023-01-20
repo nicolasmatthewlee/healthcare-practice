@@ -4,6 +4,8 @@ import "bootstrap";
 
 import PROFILE_IMG from "./assets/profile.jpg";
 
+import MAIN_IMG from "./assets/mental_health.png";
+
 export const App = () => {
   return (
     <div className="App">
@@ -54,7 +56,7 @@ export const App = () => {
       <div class="container-fluid p-4">
         <div class="row">
           <div class="col-sm-6">
-            <div class="card mb-3 border-0">
+            <div class="card border-0">
               <div class="card-body">
                 <h1 class="card-title">
                   Getting the right help should be easy.
@@ -76,8 +78,16 @@ export const App = () => {
               </div>
             </div>
           </div>
-          <div class="col-sm-6"></div>
+          <div class="col-sm-6 d-flex align-items-center p-0 mb-3">
+            <img
+              className="img-fluid"
+              src={MAIN_IMG}
+              alt="therapists helping patient"
+            />
+          </div>
         </div>
+
+        <div className="border mb-3"></div>
 
         <div class="row mb-2">
           <div class="col">
@@ -127,11 +137,15 @@ export const App = () => {
           </div>
         </div>
 
+        <div className="border mt-5 mb-3"></div>
+
         <div className="row mb-3">
           <div className="col">
             <h1>Services</h1>
           </div>
         </div>
+
+        <div className="border mt-5 mb-3"></div>
 
         <div className="row mb-3">
           <div className="col">
@@ -156,6 +170,8 @@ export const App = () => {
             </div>
           </div>
         </div>
+
+        <div className="border mt-5 mb-3"></div>
 
         <div className="row mb-3">
           <div className="col">
