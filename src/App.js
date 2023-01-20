@@ -5,14 +5,14 @@ import "bootstrap";
 export const App = () => {
   return (
     <div className="App">
-      {/* <div class="container-fluid p-0">
+      <div class="container-fluid p-0">
         <button
-          className="btn btn-primary w-100 p-0 rounded-0"
-          style={{ height: "50px" }}
+          className="btn btn-warning w-100 p-0 rounded-0"
+          style={{ height: "30px" }}
         >
           <b>SCHEDULE AN APPOINTMENT</b>
         </button>
-      </div> */}
+      </div>
 
       <nav className="navbar navbar-expand-sm shadow px-3">
         <div className="container-fluid">
