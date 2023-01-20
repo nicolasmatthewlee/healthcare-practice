@@ -182,8 +182,34 @@ export const App = () => {
 
       <div className="container-fluid bg-dark text-white p-3">
         <div className="row">
-          <div className="col-3">
-            <p className="m-0">600 Blue Spring St. Clarksville, TN 37040</p>
+          <div className="col-sm-6 col-md-4 text-center">
+            <h2>
+              <i className="bi-capsule" /> PsychCorp
+            </h2>
+          </div>
+          <div className="col-sm-6 col-md-4 text-center">
+            <p className="m-0">
+              600 Blue Spring Ave, Suite 880
+              <br /> Clarksville, CA 92040
+              <br />
+              (123) 456-7890
+            </p>
+          </div>
+          <div className="col-md-4">
+            <div className="row justify-content-center">
+              <div className="col-auto">
+                <i className="bi-yelp" style={{ fontSize: "24px" }}></i>
+              </div>
+              <div className="col-auto">
+                <i className="bi-facebook" style={{ fontSize: "24px" }}></i>
+              </div>
+              <div className="col-auto">
+                <i className="bi-instagram" style={{ fontSize: "24px" }}></i>
+              </div>
+              <div className="col-auto">
+                <i className="bi-linkedin" style={{ fontSize: "24px" }}></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
