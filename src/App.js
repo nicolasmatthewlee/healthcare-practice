@@ -103,9 +103,9 @@ export const App = () => {
           </div>
         </div>
 
-        <div class="row gx-3 gy-3">
-          <div class="col">
-            <div class="card">
+        <div class="row gx-3 gy-3 mb-3">
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title">Anxiety</h5>
                 <p class="card-text">
@@ -117,8 +117,8 @@ export const App = () => {
               </div>
             </div>
           </div>
-          <div className="col">
-            <div className="card">
+          <div className="col-12 col-sm-6 col-md-4">
+            <div className="card h-100">
               <div className="card-body">
                 <h5 className="card-title">Depression</h5>
                 <p className="card-text">
@@ -130,8 +130,8 @@ export const App = () => {
               </div>
             </div>
           </div>
-          <div className="col">
-            <div className="card">
+          <div className="col-12 col-sm-6 col-md-4">
+            <div className="card h-100">
               <div className="card-body">
                 <h5 className="card-title">Addiction</h5>
                 <p className="card-text">
