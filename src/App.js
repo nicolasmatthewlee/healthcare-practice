@@ -35,10 +35,13 @@ export const App = () => {
           <div className="navbar-collapse collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto">
               <a href="#" className="nav-item nav-link">
-                About
+                Expertise
               </a>
               <a href="#" className="nav-item nav-link">
                 Services
+              </a>
+              <a href="#" className="nav-item nav-link">
+                About
               </a>
               <a href="#" className="nav-item nav-link">
                 Contact
@@ -73,31 +76,10 @@ export const App = () => {
               </div>
             </div>
           </div>
-          <div class="col-sm-6">
-            <div class="card mb-3">
-              <img src={PROFILE_IMG} alt="" class="card-img-top" />
-              <div class="card-body">
-                <h1 class="card-title">Dr. Johnathan Reading</h1>
-                <p class="card-text">
-                  Welcome to our practice! Our team of dedicated therapists are
-                  here to provide you with the support and guidance you need to
-                  overcome life's challenges. We look forward to working with
-                  you!
-                </p>
-                <div class="row">
-                  <div class="col">
-                    <button class="btn btn-sm btn-warning me-3">
-                      Get started
-                    </button>
-                    <button class="btn btn-sm btn-light">Learn more</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="col-sm-6"></div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-2">
           <div class="col">
             <h1>Areas of focus</h1>
           </div>
@@ -148,6 +130,30 @@ export const App = () => {
         <div className="row mb-3">
           <div className="col">
             <h1>Services</h1>
+          </div>
+        </div>
+
+        <div className="row mb-3">
+          <div className="col">
+            <h1>About</h1>
+          </div>
+        </div>
+
+        <div class="card mb-3">
+          <img src={PROFILE_IMG} alt="" class="card-img-top" />
+          <div class="card-body">
+            <h1 class="card-title">Dr. Johnathan Reading</h1>
+            <p class="card-text">
+              Welcome to our practice! Our team of dedicated therapists are here
+              to provide you with the support and guidance you need to overcome
+              life's challenges. We look forward to working with you!
+            </p>
+            <div class="row">
+              <div class="col">
+                <button class="btn btn-sm btn-warning me-3">Get started</button>
+                <button class="btn btn-sm btn-light">Learn more</button>
+              </div>
+            </div>
           </div>
         </div>
 
