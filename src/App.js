@@ -5,19 +5,19 @@ import "bootstrap";
 export const App = () => {
   return (
     <div className="App">
-      <div class="container-fluid p-0">
+      {/* <div class="container-fluid p-0">
         <button
           className="btn btn-primary w-100 p-0 rounded-0"
           style={{ height: "50px" }}
         >
           <b>SCHEDULE AN APPOINTMENT</b>
         </button>
-      </div>
+      </div> */}
 
-      <nav className="navbar navbar-expand-md bg-dark navbar-dark">
+      <nav className="navbar navbar-expand-sm shadow px-3">
         <div className="container-fluid">
           <a href="#" className="navbar-brand">
-            John Doe
+            <i className="bi-capsule"></i> <b>PsychCorp</b>
           </a>
           <button
             type="button"
@@ -28,10 +28,7 @@ export const App = () => {
             <i className="navbar-toggler-icon"></i>
           </button>
           <div className="navbar-collapse collapse" id="navbarCollapse">
-            <div class="navbar-nav">
-              <a href="#" className="nav-item nav-link">
-                Home
-              </a>
+            <div class="navbar-nav ms-auto">
               <a href="#" className="nav-item nav-link">
                 About
               </a>
