@@ -2,6 +2,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap";
 
+import PROFILE_IMG from "./assets/profile.jpg";
+
 export const App = () => {
   return (
     <div className="App">
@@ -14,7 +16,10 @@ export const App = () => {
         </button>
       </div>
 
-      <nav className="navbar navbar-expand-sm shadow px-3">
+      <nav
+        className="navbar navbar-expand-sm shadow px-3"
+        style={{ zIndex: 1 }}
+      >
         <div className="container-fluid">
           <a href="#" className="navbar-brand">
             <i className="bi-capsule"></i> <b>PsychCorp</b>
@@ -42,6 +47,124 @@ export const App = () => {
           </div>
         </div>
       </nav>
+
+      <div class="container-fluid p-4">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card mb-3 border-0">
+              <div class="card-body">
+                <h1 class="card-title">
+                  Getting the right help should be easy.
+                </h1>
+                <p class="card-text">
+                  Welcome to our practice! Our team of dedicated therapists are
+                  here to provide you with the support and guidance you need to
+                  overcome life's challenges. We look forward to working with
+                  you.
+                </p>
+                <div class="row">
+                  <div class="col">
+                    <button class="btn btn-warning btn-sm me-3">
+                      Get started
+                    </button>
+                    <button class="btn btn-light btn-sm">Learn more</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card mb-3">
+              <img src={PROFILE_IMG} alt="" class="card-img-top" />
+              <div class="card-body">
+                <h1 class="card-title">Dr. Johnathan Reading</h1>
+                <p class="card-text">
+                  Welcome to our practice! Our team of dedicated therapists are
+                  here to provide you with the support and guidance you need to
+                  overcome life's challenges. We look forward to working with
+                  you!
+                </p>
+                <div class="row">
+                  <div class="col">
+                    <button class="btn btn-sm btn-warning me-3">
+                      Get started
+                    </button>
+                    <button class="btn btn-sm btn-light">Learn more</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <h1>Areas of focus</h1>
+          </div>
+        </div>
+
+        <div class="row gx-3 gy-3">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Anxiety</h5>
+                <p class="card-text">
+                  Anxiety is a feeling of worry, nervousness or unease about
+                  something with an uncertain outcome, it can become
+                  overwhelming and disruptive to daily life and can manifest in
+                  different ways.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+            <div className="card">
+              <div className="card-body">
+                <h5 className="card-title">Depression</h5>
+                <p className="card-text">
+                  Depression is a mental health condition characterized by
+                  feelings of sadness, loss, and anger that interfere with daily
+                  life. It can also cause physical symptoms such as fatigue and
+                  changes in appetite and sleep patterns.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+            <div className="card">
+              <div className="card-body">
+                <h5 className="card-title">Addiction</h5>
+                <p className="card-text">
+                  Addiction is a chronic condition characterized by compulsively
+                  seeking and using a substance or engaging in a behavior
+                  despite negative consequences. It can cause physical,
+                  psychological and social harm.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="row mb-3">
+          <div className="col">
+            <h1>Services</h1>
+          </div>
+        </div>
+
+        <div className="row mb-3">
+          <div className="col">
+            <h1>Contact</h1>
+          </div>
+        </div>
+      </div>
+
+      <div className="container-fluid bg-dark text-white p-3">
+        <div className="row">
+          <div className="col-3">
+            <p className="m-0">600 Blue Spring St. Clarksville, TN 37040</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
