@@ -14,12 +14,14 @@ export const App = () => {
   return (
     <div className="App">
       <div class="container-fluid p-0">
-        <button
-          className="btn btn-warning w-100 p-0 rounded-0"
-          style={{ height: "30px" }}
-        >
-          <b>SCHEDULE AN APPOINTMENT</b>
-        </button>
+        <a href="#contact">
+          <button
+            className="btn btn-warning w-100 p-0 rounded-0"
+            style={{ height: "30px" }}
+          >
+            <b>SCHEDULE AN APPOINTMENT</b>
+          </button>
+        </a>
       </div>
 
       <nav
@@ -452,7 +454,7 @@ export const App = () => {
           </div>
         </div>
 
-        <form className="col-md-6 bg-light p-4 rounded" action="">
+        <form className="col-md-6 bg-light border p-4 rounded" action="#">
           <div className="row mb-3">
             <div className="col-6">
               <label htmlFor="first-name" className="form-label">
@@ -579,7 +581,7 @@ export const App = () => {
             </div>
           </div>
 
-          <div className="row mb-3">
+          <div className="row">
             <div className="col-auto">
               <button className="btn btn-warning w-100">Submit</button>
             </div>
