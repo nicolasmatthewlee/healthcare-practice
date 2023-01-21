@@ -85,7 +85,9 @@ export const App = () => {
                       </button>
                     </a>
                     <a href="#expertise">
-                      <button class="btn btn-light btn-sm">Learn more</button>
+                      <button class="btn btn-light btn-sm">
+                        Learn more <i className="bi-arrow-right"></i>
+                      </button>
                     </a>
                   </div>
                 </div>
@@ -394,12 +396,14 @@ export const App = () => {
                   <div className="col-auto">
                     <a href="#contact">
                       <button className="btn btn-sm btn-warning">
-                        Contact
+                        <i className="bi-envelope-fill"></i> Contact
                       </button>
                     </a>
                   </div>
                   <div className="col-auto">
-                    <button class="btn btn-sm btn-light">Read more</button>
+                    <button class="btn btn-sm btn-light">
+                      Read more <i className="bi-arrow-right"></i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -418,12 +422,14 @@ export const App = () => {
                   <div className="col-auto">
                     <a href="#contact">
                       <button className="btn btn-sm btn-warning">
-                        Contact
+                        <i className="bi-envelope-fill"></i> Contact
                       </button>
                     </a>
                   </div>
                   <div className="col-auto">
-                    <button class="btn btn-sm btn-light">Read more</button>
+                    <button class="btn btn-sm btn-light">
+                      Read more <i className="bi-arrow-right"></i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -442,12 +448,14 @@ export const App = () => {
                   <div class="col-auto">
                     <a href="#contact">
                       <button className="btn btn-sm btn-warning">
-                        Contact
+                        <i className="bi-envelope-fill"></i> Contact
                       </button>
                     </a>
                   </div>
                   <div className="col-auto">
-                    <button class="btn btn-sm btn-light">Read more</button>
+                    <button class="btn btn-sm btn-light">
+                      Read more <i className="bi-arrow-right"></i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -466,12 +474,14 @@ export const App = () => {
                   <div className="col-auto">
                     <a href="#contact">
                       <button className="btn btn-sm btn-warning">
-                        Contact
+                        <i className="bi-envelope-fill"></i> Contact
                       </button>
                     </a>
                   </div>
                   <div className="col-auto">
-                    <button class="btn btn-sm btn-light">Read more</button>
+                    <button class="btn btn-sm btn-light">
+                      Read more <i className="bi-arrow-right"></i>
+                    </button>
                   </div>
                 </div>
               </div>
