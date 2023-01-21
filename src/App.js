@@ -163,7 +163,7 @@ export const App = () => {
           </div>
 
           <div className="col">
-            <div className="accordion">
+            <div className="accordion" id="servicesAccordion">
               <div className="accordion-item">
                 <h2 className="accordion-header">
                   <button
@@ -174,7 +174,11 @@ export const App = () => {
                     Psychological Testing
                   </button>
                 </h2>
-                <div className="accordion-collapse collapse" id="collapse1">
+                <div
+                  className="accordion-collapse collapse"
+                  id="collapse1"
+                  data-bs-parent="#servicesAccordion"
+                >
                   <div className="accordion-body">
                     <p>
                       Psychological testing services provide a thorough
@@ -205,7 +209,11 @@ export const App = () => {
                     Individual Therapy
                   </button>
                 </h2>
-                <div className="accordion-collapse collapse" id="collapse2">
+                <div
+                  className="accordion-collapse collapse"
+                  id="collapse2"
+                  data-bs-parent="#servicesAccordion"
+                >
                   <div className="accordion-body">
                     <p>
                       Individual therapy services provide a safe and
@@ -239,7 +247,11 @@ export const App = () => {
                     Marriage and Family Therapy
                   </button>
                 </h2>
-                <div className="accordion-collapse collapse" id="collapse3">
+                <div
+                  className="accordion-collapse collapse"
+                  id="collapse3"
+                  data-bs-parent="#servicesAccordion"
+                >
                   <div className="accordion-body">
                     <p>
                       Marriage and therapy services provide couples with the
@@ -272,7 +284,11 @@ export const App = () => {
                     Addiction Services
                   </button>
                 </h2>
-                <div className="accordion-collapse collapse" id="collapse4">
+                <div
+                  className="accordion-collapse collapse"
+                  id="collapse4"
+                  data-bs-parent="#servicesAccordion"
+                >
                   <div className="accordion-body">
                     <p>
                       Addiction services provide comprehensive treatment and
@@ -306,7 +322,11 @@ export const App = () => {
                     Telehealth Therapy
                   </button>
                 </h2>
-                <div className="accordion-collapse collapse" id="collapse5">
+                <div
+                  className="accordion-collapse collapse"
+                  id="collapse5"
+                  data-bs-parent="#servicesAccordion"
+                >
                   <div className="accordion-body">
                     <p>
                       Telehealth therapy provides individuals with access to
