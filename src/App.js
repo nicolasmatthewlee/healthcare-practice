@@ -2,6 +2,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap";
 
+import "./overide.css";
+
 import PROFILE_IMG2 from "./assets/profile2.jpg";
 import PROFILE_IMG3 from "./assets/profile3.jpg";
 import PROFILE_IMG4 from "./assets/profile4.jpg";
