@@ -9,6 +9,8 @@ import PROFILE_IMG5 from "./assets/profile5.jpg";
 
 import MAIN_IMG from "./assets/main.png";
 import SERVICES_IMG from "./assets/services.png";
+import AREAS_IMG from "./assets/areas.png";
+import CONTACT_IMG from "./assets/contact.png";
 
 export const App = () => {
   return (
@@ -137,7 +139,7 @@ export const App = () => {
             </div>
           </div>
           <div className="col-12 col-sm-6 col-md-4">
-            <div className="card h-100">
+            <div className="card h-100 h-sm-auto">
               <div className="card-header">
                 <h5 className="m-0">Addiction</h5>
               </div>
@@ -150,6 +152,13 @@ export const App = () => {
                 </p>
               </div>
             </div>
+          </div>
+          <div className="d-none d-md-none col-12 col-sm-6 col-md-4 p-3 align-items-center d-sm-flex">
+            <img
+              src={AREAS_IMG}
+              alt="mental health areas"
+              className="img-fluid h-100"
+            />
           </div>
         </div>
 
@@ -460,139 +469,142 @@ export const App = () => {
           </div>
         </div>
 
-        <form className="col-md-6 bg-light border p-4 rounded" action="#">
-          <div className="row mb-3">
-            <div className="col-6">
-              <label htmlFor="first-name" className="form-label">
-                First name
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="First name"
-                id="first-name"
-              />
+        <div className="row">
+          <form className="col-md-6 bg-light border p-4 rounded" action="#">
+            <div className="row mb-3">
+              <div className="col-6">
+                <label htmlFor="first-name" className="form-label">
+                  First name
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="First name"
+                  id="first-name"
+                />
+              </div>
+              <div className="col-6">
+                <label htmlFor="last-name" className="form-label">
+                  Last name
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Last name"
+                  id="last-name"
+                />
+              </div>
             </div>
-            <div className="col-6">
-              <label htmlFor="last-name" className="form-label">
-                Last name
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Last name"
-                id="last-name"
-              />
+            <div className="row mb-3">
+              <div className="col-6">
+                <label htmlFor="email" className="form-label">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  className="form-control"
+                  placeholder="Email"
+                  id="email"
+                />
+              </div>
+              <div className="col-6">
+                <label htmlFor="phone" className="form-label">
+                  Phone
+                </label>
+                <input
+                  type="tel"
+                  className="form-control"
+                  placeholder="(123)-456-7890"
+                  id="phone"
+                />
+              </div>
             </div>
-          </div>
-
-          <div className="row mb-3">
-            <div className="col-6">
-              <label htmlFor="email" className="form-label">
-                Email
-              </label>
-              <input
-                type="email"
-                className="form-control"
-                placeholder="Email"
-                id="email"
-              />
-            </div>
-            <div className="col-6">
-              <label htmlFor="phone" className="form-label">
-                Phone
-              </label>
-              <input
-                type="tel"
-                className="form-control"
-                placeholder="(123)-456-7890"
-                id="phone"
-              />
-            </div>
-          </div>
-
-          <div className="row mb-3">
-            <div className="col">
-              <p className="form-label">Availability for call</p>
-              <div className="row">
-                <div className="col-12">
-                  <div className="form-check">
-                    <input
-                      type="checkbox"
-                      className="form-check-input"
-                      id="morning"
-                    />
-                    <label htmlFor="morning" className="form-check-label">
-                      Morning
-                    </label>
+            <div className="row mb-3">
+              <div className="col">
+                <p className="form-label">Availability for call</p>
+                <div className="row">
+                  <div className="col-12">
+                    <div className="form-check">
+                      <input
+                        type="checkbox"
+                        className="form-check-input"
+                        id="morning"
+                      />
+                      <label htmlFor="morning" className="form-check-label">
+                        Morning
+                      </label>
+                    </div>
                   </div>
-                </div>
-
-                <div className="col-12">
-                  <div className="form-check">
-                    <input
-                      type="checkbox"
-                      className="form-check-input"
-                      id="afternoon"
-                    />
-                    <label htmlFor="afternoon" className="form-check-label">
-                      Afternoon
-                    </label>
+                  <div className="col-12">
+                    <div className="form-check">
+                      <input
+                        type="checkbox"
+                        className="form-check-input"
+                        id="afternoon"
+                      />
+                      <label htmlFor="afternoon" className="form-check-label">
+                        Afternoon
+                      </label>
+                    </div>
                   </div>
-                </div>
-
-                <div className="col-12">
-                  <div className="form-check">
-                    <input
-                      type="checkbox"
-                      className="form-check-input"
-                      id="evening"
-                    />
-                    <label htmlFor="evening" className="form-check-label">
-                      Evening
-                    </label>
+                  <div className="col-12">
+                    <div className="form-check">
+                      <input
+                        type="checkbox"
+                        className="form-check-input"
+                        id="evening"
+                      />
+                      <label htmlFor="evening" className="form-check-label">
+                        Evening
+                      </label>
+                    </div>
                   </div>
-                </div>
-
-                <div className="col-12">
-                  <div className="form-check mt-3">
-                    <input
-                      type="checkbox"
-                      className="form-check-input"
-                      id="email-preferred"
-                    />
-                    <label
-                      htmlFor="email-preferred"
-                      className="form-check-label"
-                    >
-                      I prefer to be emailed
-                    </label>
+                  <div className="col-12">
+                    <div className="form-check mt-3">
+                      <input
+                        type="checkbox"
+                        className="form-check-input"
+                        id="email-preferred"
+                      />
+                      <label
+                        htmlFor="email-preferred"
+                        className="form-check-label"
+                      >
+                        I prefer to be emailed
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="row mb-3">
-            <div className="col">
-              <label htmlFor="message" className="form-label">
-                Message
-              </label>
-              <textarea
-                rows="3"
-                className="form-control"
-                placeholder="Your message here..."
-                id="message"
-              />
+            <div className="row mb-3">
+              <div className="col">
+                <label htmlFor="message" className="form-label">
+                  Message
+                </label>
+                <textarea
+                  rows="3"
+                  className="form-control"
+                  placeholder="Your message here..."
+                  id="message"
+                />
+              </div>
             </div>
-          </div>
-
-          <div className="row">
-            <div className="col-auto">
-              <button className="btn btn-warning w-100">Submit</button>
+            <div className="row">
+              <div className="col-auto">
+                <button className="btn btn-warning w-100">Submit</button>
+              </div>
             </div>
+          </form>
+
+          <div className="d-none d-md-flex col-md-6 align-items-end">
+            <img
+              src={CONTACT_IMG}
+              alt="relaxing at peaces"
+              className="img-fluid"
+            />
           </div>
-        </form>
+        </div>
       </div>
 
       <div className="container-fluid bg-dark text-white p-3">
