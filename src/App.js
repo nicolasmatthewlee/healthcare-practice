@@ -3,6 +3,10 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap";
 
 import PROFILE_IMG from "./assets/profile.jpg";
+import PROFILE_IMG2 from "./assets/profile2.jpg";
+import PROFILE_IMG3 from "./assets/profile3.jpg";
+import PROFILE_IMG4 from "./assets/profile4.jpg";
+import PROFILE_IMG5 from "./assets/profile5.jpg";
 
 import MAIN_IMG from "./assets/mental_health.png";
 
@@ -149,23 +153,88 @@ export const App = () => {
 
         <div className="row mb-3">
           <div className="col">
-            <h1>About</h1>
+            <h1>Team</h1>
           </div>
         </div>
 
-        <div class="card mb-3">
-          <img src={PROFILE_IMG} alt="" class="card-img-top" />
-          <div class="card-body">
-            <h1 class="card-title">Dr. Johnathan Reading</h1>
-            <p class="card-text">
-              Welcome to our practice! Our team of dedicated therapists are here
-              to provide you with the support and guidance you need to overcome
-              life's challenges. We look forward to working with you!
-            </p>
-            <div class="row">
-              <div class="col">
-                <button class="btn btn-sm btn-warning me-3">Get started</button>
-                <button class="btn btn-sm btn-light">Learn more</button>
+        <div className="row gy-4">
+          <div className="col-6 col-md-3">
+            <div class="card mb-3 h-100">
+              <img src={PROFILE_IMG2} alt="" class="card-img-top" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Dr. Ethan Reading</h3>
+                <p class="card-text mb-0">
+                  <b>MD, PsyD</b> <br /> Psychiatrist
+                </p>
+                <div className="flex-fill"></div>
+                <div className="row g-3">
+                  <div className="col-auto">
+                    <button className="btn btn-sm btn-warning">Contact</button>
+                  </div>
+                  <div className="col-auto">
+                    <button class="btn btn-sm btn-light">Read more</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-6 col-md-3">
+            <div class="card mb-3 h-100">
+              <img src={PROFILE_IMG4} alt="" class="card-img-top" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Dr. Elizabeth Green</h3>
+                <p class="card-text mb-0">
+                  <b>MD, PhD</b> <br /> Psychologist
+                </p>
+                <div className="flex-fill"></div>
+                <div className="row g-3">
+                  <div className="col-auto">
+                    <button className="btn btn-sm btn-warning">Contact</button>
+                  </div>
+                  <div className="col-auto">
+                    <button class="btn btn-sm btn-light">Read more</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-6 col-md-3">
+            <div class="card mb-3 h-100">
+              <img src={PROFILE_IMG3} alt="" class="card-img-top" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Dr. Nathan Lee</h3>
+                <p class="card-text mb-0">
+                  <b>PsyD, PhD</b> <br /> Therapist, Nutritionist
+                </p>
+                <div className="flex-fill"></div>
+                <div class="row g-3">
+                  <div class="col-auto">
+                    <button class="btn btn-sm btn-warning">Contact</button>
+                  </div>
+                  <div className="col-auto">
+                    <button class="btn btn-sm btn-light">Read more</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-6 col-md-3">
+            <div class="card mb-3 h-100">
+              <img src={PROFILE_IMG5} alt="" class="card-img-top" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Mrs. Isabel Pham</h3>
+                <p class="card-text mb-0">
+                  <b>Licensed MFT</b> <br /> Marriage and Family Therapist
+                </p>
+                <div className="flex-fill"></div>
+                <div className="row g-3">
+                  <div className="col-auto">
+                    <button className="btn btn-sm btn-warning">Contact</button>
+                  </div>
+                  <div className="col-auto">
+                    <button class="btn btn-sm btn-light">Read more</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -181,7 +250,7 @@ export const App = () => {
       </div>
 
       <div className="container-fluid bg-dark text-white p-3">
-        <div className="row">
+        <div className="row gy-3">
           <div className="col-sm-6 col-md-4 text-center">
             <h2>
               <i className="bi-capsule" /> PsychCorp
