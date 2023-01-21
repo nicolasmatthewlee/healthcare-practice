@@ -390,7 +390,11 @@ export const App = () => {
                 <div className="flex-fill"></div>
                 <div className="row g-3">
                   <div className="col-auto">
-                    <button className="btn btn-sm btn-warning">Contact</button>
+                    <a href="#contact">
+                      <button className="btn btn-sm btn-warning">
+                        Contact
+                      </button>
+                    </a>
                   </div>
                   <div className="col-auto">
                     <button class="btn btn-sm btn-light">Read more</button>
@@ -410,7 +414,11 @@ export const App = () => {
                 <div className="flex-fill"></div>
                 <div className="row g-3">
                   <div className="col-auto">
-                    <button className="btn btn-sm btn-warning">Contact</button>
+                    <a href="#contact">
+                      <button className="btn btn-sm btn-warning">
+                        Contact
+                      </button>
+                    </a>
                   </div>
                   <div className="col-auto">
                     <button class="btn btn-sm btn-light">Read more</button>
@@ -430,7 +438,11 @@ export const App = () => {
                 <div className="flex-fill"></div>
                 <div class="row g-3">
                   <div class="col-auto">
-                    <button class="btn btn-sm btn-warning">Contact</button>
+                    <a href="#contact">
+                      <button className="btn btn-sm btn-warning">
+                        Contact
+                      </button>
+                    </a>
                   </div>
                   <div className="col-auto">
                     <button class="btn btn-sm btn-light">Read more</button>
@@ -450,7 +462,11 @@ export const App = () => {
                 <div className="flex-fill"></div>
                 <div className="row g-3">
                   <div className="col-auto">
-                    <button className="btn btn-sm btn-warning">Contact</button>
+                    <a href="#contact">
+                      <button className="btn btn-sm btn-warning">
+                        Contact
+                      </button>
+                    </a>
                   </div>
                   <div className="col-auto">
                     <button class="btn btn-sm btn-light">Read more</button>
