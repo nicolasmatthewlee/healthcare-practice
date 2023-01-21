@@ -78,14 +78,27 @@ export const App = () => {
                   you.
                 </p>
                 <div class="row mb-3">
-                  <div class="col">
+                  <div class="col-12">
                     <a href="#contact">
-                      <button class="btn btn-warning btn-sm me-3">
+                      <button class="d-md-none btn btn-warning btn-sm me-3">
+                        Get started
+                      </button>
+                      <button class="d-none d-md-inline-flex d-xl-none btn btn-warning me-3">
+                        Get started
+                      </button>
+                      <button class="d-none d-xl-inline-flex btn btn-lg btn-warning me-3">
                         Get started
                       </button>
                     </a>
+
                     <a href="#expertise">
-                      <button class="btn btn-light btn-sm">
+                      <button class="d-md-none btn btn-light btn-sm">
+                        Learn more <i className="bi-arrow-right"></i>
+                      </button>
+                      <button class="d-none d-md-inline-flex d-xl-none btn btn-light me-3">
+                        Learn more <i className="bi-arrow-right"></i>
+                      </button>
+                      <button class="d-none d-xl-inline-flex btn btn-lg btn-light me-3">
                         Learn more <i className="bi-arrow-right"></i>
                       </button>
                     </a>
