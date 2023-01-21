@@ -108,8 +108,10 @@ export const App = () => {
         <div class="row gx-3 gy-3 mb-3">
           <div class="col-12 col-sm-6 col-md-4">
             <div class="card h-100">
+              <div className="card-header">
+                <h5 className="m-0">Anxiety</h5>
+              </div>
               <div class="card-body">
-                <h5 class="card-title">Anxiety</h5>
                 <p class="card-text">
                   Anxiety is a feeling of worry, nervousness or unease about
                   something with an uncertain outcome, it can become
@@ -121,8 +123,10 @@ export const App = () => {
           </div>
           <div className="col-12 col-sm-6 col-md-4">
             <div className="card h-100">
+              <div className="card-header">
+                <h5 className="m-0">Depression</h5>
+              </div>
               <div className="card-body">
-                <h5 className="card-title">Depression</h5>
                 <p className="card-text">
                   Depression is a mental health condition characterized by
                   feelings of sadness, loss, and anger that interfere with daily
@@ -134,8 +138,10 @@ export const App = () => {
           </div>
           <div className="col-12 col-sm-6 col-md-4">
             <div className="card h-100">
+              <div className="card-header">
+                <h5 className="m-0">Addiction</h5>
+              </div>
               <div className="card-body">
-                <h5 className="card-title">Addiction</h5>
                 <p className="card-text">
                   Addiction is a chronic condition characterized by compulsively
                   seeking and using a substance or engaging in a behavior
