@@ -151,14 +151,14 @@ export const App = () => {
                   psychological and social harm.
                 </p>
               </div>
+              <div className="d-none d-sm-flex d-md-none position-absolute start-100 ms-3 mh-100 h-100 w-100 d-flex align-items-center justify-content-center">
+                <img
+                  src={AREAS_IMG}
+                  alt="mental health areas"
+                  className="img-fluid mh-100 align-bottom"
+                />
+              </div>
             </div>
-          </div>
-          <div className="d-none d-md-none col-12 col-sm-6 col-md-4 p-3 align-items-center d-sm-flex">
-            <img
-              src={AREAS_IMG}
-              alt="mental health areas"
-              className="img-fluid h-100"
-            />
           </div>
         </div>
 
