@@ -75,7 +75,7 @@ export const App = () => {
                   overcome life's challenges. We look forward to working with
                   you.
                 </p>
-                <div class="row">
+                <div class="row mb-3">
                   <div class="col">
                     <a href="#contact">
                       <button class="btn btn-warning btn-sm me-3">
