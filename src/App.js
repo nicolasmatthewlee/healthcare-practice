@@ -2,13 +2,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap";
 
-import PROFILE_IMG from "./assets/profile.jpg";
 import PROFILE_IMG2 from "./assets/profile2.jpg";
 import PROFILE_IMG3 from "./assets/profile3.jpg";
 import PROFILE_IMG4 from "./assets/profile4.jpg";
 import PROFILE_IMG5 from "./assets/profile5.jpg";
 
-import MAIN_IMG from "./assets/mental_health.png";
+import MAIN_IMG from "./assets/main.png";
+import SERVICES_IMG from "./assets/services.png";
 
 export const App = () => {
   return (
@@ -150,6 +150,186 @@ export const App = () => {
         <div id="services" className="row mb-3 pt-3">
           <div className="col">
             <h1>Services</h1>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-12 col-sm-6 col-lg-4 p-0 d-flex align-items-start">
+            <img
+              className="img-fluid"
+              src={SERVICES_IMG}
+              alt="therapist helping a client"
+            />
+          </div>
+
+          <div className="col">
+            <div className="accordion">
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    data-bs-target="#collapse1"
+                    data-bs-toggle="collapse"
+                  >
+                    Psychological Testing
+                  </button>
+                </h2>
+                <div className="accordion-collapse collapse" id="collapse1">
+                  <div className="accordion-body">
+                    <p>
+                      Psychological testing services provide a thorough
+                      assessment of an individual's cognitive, emotional, and
+                      behavioral functioning. Our team of trained professionals
+                      administer a range of tests including IQ, personality,
+                      aptitude, achievement, neuropsychological, behavioral, and
+                      projective assessments. These tests are designed to
+                      provide insight into an individual's strengths and areas
+                      for improvement, and can be used to inform diagnosis,
+                      treatment planning, and academic or career decisions. Our
+                      testing services are suitable for individuals of all ages
+                      and can be helpful for a variety of concerns such as
+                      learning difficulties, mental health issues, or behavioral
+                      problems.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    data-bs-target="#collapse2"
+                    data-bs-toggle="collapse"
+                  >
+                    Individual Therapy
+                  </button>
+                </h2>
+                <div className="accordion-collapse collapse" id="collapse2">
+                  <div className="accordion-body">
+                    <p>
+                      Individual therapy services provide a safe and
+                      confidential space for individuals to explore their
+                      thoughts, feelings, and behaviors. Our team of trained
+                      therapists use evidence-based techniques to help
+                      individuals understand and work through their challenges.
+                      We offer a range of therapies including
+                      cognitive-behavioral therapy, talk therapy, and
+                      solution-focused therapy. These therapies can help
+                      individuals with a wide range of concerns such as anxiety,
+                      depression, trauma, relationship issues, and life
+                      transitions. Our therapists work with individuals to set
+                      therapy goals and develop a treatment plan that is
+                      tailored to meet their specific needs. With the support
+                      and guidance of our therapists, individuals can gain
+                      insight, build coping skills, and make positive changes in
+                      their lives.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    data-bs-target="#collapse3"
+                    data-bs-toggle="collapse"
+                  >
+                    Marriage and Family Therapy
+                  </button>
+                </h2>
+                <div className="accordion-collapse collapse" id="collapse3">
+                  <div className="accordion-body">
+                    <p>
+                      Marriage and therapy services provide couples with the
+                      tools and support they need to improve their relationship
+                      and strengthen their bond. Our team of trained therapists
+                      specialize in working with couples and use evidence-based
+                      techniques such as Emotionally Focused Therapy (EFT),
+                      Cognitive Behavioral Therapy (CBT) and the Gottman Method
+                      to help couples address and resolve conflicts, improve
+                      communication and intimacy, and build a stronger and more
+                      fulfilling relationship. We help couples to understand and
+                      manage their emotions, improve their problem-solving and
+                      conflict resolution skills, and increase their
+                      understanding of one another. Whether you are dealing with
+                      a specific issue or looking for ways to improve your
+                      relationship, our therapists can help you create a more
+                      loving and satisfying connection with your partner.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    data-bs-target="#collapse4"
+                    data-bs-toggle="collapse"
+                  >
+                    Addiction Services
+                  </button>
+                </h2>
+                <div className="accordion-collapse collapse" id="collapse4">
+                  <div className="accordion-body">
+                    <p>
+                      Addiction services provide comprehensive treatment and
+                      support for individuals struggling with substance abuse
+                      and behavioral addictions. Our team of trained
+                      professionals use evidence-based therapies such as
+                      cognitive-behavioral therapy, motivational interviewing,
+                      and 12-step facilitation to help individuals understand
+                      the underlying causes of their addiction and develop the
+                      skills and strategies needed to overcome it. We provide a
+                      range of services including individual and group therapy,
+                      medication-assisted treatment, and case management to
+                      support individuals in their recovery journey. We also
+                      offer support to families and loved ones to help them
+                      understand and cope with the effects of addiction on their
+                      loved ones. Our goal is to provide a holistic and
+                      individualized approach to help individuals achieve
+                      long-term recovery and improve their overall well-being.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    data-bs-target="#collapse5"
+                    data-bs-toggle="collapse"
+                  >
+                    Telehealth Therapy
+                  </button>
+                </h2>
+                <div className="accordion-collapse collapse" id="collapse5">
+                  <div className="accordion-body">
+                    <p>
+                      Telehealth therapy provides individuals with access to
+                      mental health care remotely via phone or video
+                      conferencing. Our team of trained therapists use
+                      evidence-based techniques to provide therapy services to
+                      individuals in the comfort of their own home. We offer a
+                      range of services including individual therapy, couples
+                      therapy, and family therapy. Our therapists are
+                      experienced in providing therapy remotely and are equipped
+                      to address a variety of concerns such as anxiety,
+                      depression, relationship issues, and life transitions.
+                      Telehealth therapy is an accessible and convenient option
+                      for those who may have difficulty attending in-person
+                      therapy sessions due to location, mobility, or scheduling
+                      constraints. It also allows for continuity of care for
+                      those who travel frequently or have other reasons that
+                      make it difficult to maintain in-person therapy sessions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
