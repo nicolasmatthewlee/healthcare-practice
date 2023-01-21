@@ -40,16 +40,16 @@ export const App = () => {
           </button>
           <div className="navbar-collapse collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto">
-              <a href="#" className="nav-item nav-link">
+              <a href="#expertise" className="nav-item nav-link">
                 Expertise
               </a>
-              <a href="#" className="nav-item nav-link">
+              <a href="#services" className="nav-item nav-link">
                 Services
               </a>
-              <a href="#" className="nav-item nav-link">
-                About
+              <a href="#team" className="nav-item nav-link">
+                Team
               </a>
-              <a href="#" className="nav-item nav-link">
+              <a href="#contact" className="nav-item nav-link">
                 Contact
               </a>
             </div>
@@ -73,10 +73,14 @@ export const App = () => {
                 </p>
                 <div class="row">
                   <div class="col">
-                    <button class="btn btn-warning btn-sm me-3">
-                      Get started
-                    </button>
-                    <button class="btn btn-light btn-sm">Learn more</button>
+                    <a href="#contact">
+                      <button class="btn btn-warning btn-sm me-3">
+                        Get started
+                      </button>
+                    </a>
+                    <a href="#expertise">
+                      <button class="btn btn-light btn-sm">Learn more</button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -91,9 +95,9 @@ export const App = () => {
           </div>
         </div>
 
-        <div className="border mb-3"></div>
+        <div className="border"></div>
 
-        <div class="row mb-2">
+        <div id="expertise" class="row mb-2 pt-3">
           <div class="col">
             <h1>Areas of focus</h1>
           </div>
@@ -141,17 +145,17 @@ export const App = () => {
           </div>
         </div>
 
-        <div className="border mt-5 mb-3"></div>
+        <div className="border mt-5"></div>
 
-        <div className="row mb-3">
+        <div id="services" className="row mb-3 pt-3">
           <div className="col">
             <h1>Services</h1>
           </div>
         </div>
 
-        <div className="border mt-5 mb-3"></div>
+        <div className="border mt-5"></div>
 
-        <div className="row mb-3">
+        <div id="team" className="row mb-3 pt-3">
           <div className="col">
             <h1>Team</h1>
           </div>
@@ -240,9 +244,9 @@ export const App = () => {
           </div>
         </div>
 
-        <div className="border mt-5 mb-3"></div>
+        <div className="border mt-5"></div>
 
-        <div className="row mb-3">
+        <div id="contact" className="row mb-3 pt-3">
           <div className="col">
             <h1>Contact</h1>
           </div>
