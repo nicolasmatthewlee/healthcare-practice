@@ -446,11 +446,145 @@ export const App = () => {
 
         <div className="border mt-5"></div>
 
-        <div id="contact" className="row mb-3 pt-3">
+        <div id="contact" className="row pt-3 mb-3">
           <div className="col">
             <h1>Contact</h1>
           </div>
         </div>
+
+        <form className="col-md-6 bg-light p-4 rounded" action="">
+          <div className="row mb-3">
+            <div className="col-6">
+              <label htmlFor="first-name" className="form-label">
+                First name
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="First name"
+                id="first-name"
+              />
+            </div>
+            <div className="col-6">
+              <label htmlFor="last-name" className="form-label">
+                Last name
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Last name"
+                id="last-name"
+              />
+            </div>
+          </div>
+
+          <div className="row mb-3">
+            <div className="col-6">
+              <label htmlFor="email" className="form-label">
+                Email
+              </label>
+              <input
+                type="email"
+                className="form-control"
+                placeholder="Email"
+                id="email"
+              />
+            </div>
+            <div className="col-6">
+              <label htmlFor="phone" className="form-label">
+                Phone
+              </label>
+              <input
+                type="tel"
+                className="form-control"
+                placeholder="(123)-456-7890"
+                id="phone"
+              />
+            </div>
+          </div>
+
+          <div className="row mb-3">
+            <div className="col">
+              <p className="form-label">Availability for call</p>
+              <div className="row">
+                <div className="col-12">
+                  <div className="form-check">
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      id="morning"
+                    />
+                    <label htmlFor="morning" className="form-check-label">
+                      Morning
+                    </label>
+                  </div>
+                </div>
+
+                <div className="col-12">
+                  <div className="form-check">
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      id="afternoon"
+                    />
+                    <label htmlFor="afternoon" className="form-check-label">
+                      Afternoon
+                    </label>
+                  </div>
+                </div>
+
+                <div className="col-12">
+                  <div className="form-check">
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      id="evening"
+                    />
+                    <label htmlFor="evening" className="form-check-label">
+                      Evening
+                    </label>
+                  </div>
+                </div>
+
+                <div className="col-12">
+                  <div className="form-check mt-3">
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      id="email-preferred"
+                    />
+                    <label
+                      htmlFor="email-preferred"
+                      className="form-check-label"
+                    >
+                      I prefer to be emailed
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="row mb-3">
+            <div className="col">
+              <label htmlFor="message" className="form-label">
+                Message
+              </label>
+              <textarea
+                rows="3"
+                className="form-control"
+                placeholder="Your message here..."
+                id="message"
+              />
+            </div>
+          </div>
+
+          <div className="row mb-3">
+            <div className="col-auto">
+              <button className="btn btn-warning w-100">Submit</button>
+            </div>
+          </div>
+        </form>
       </div>
 
       <div className="container-fluid bg-dark text-white p-3">
