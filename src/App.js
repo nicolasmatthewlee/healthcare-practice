@@ -93,13 +93,13 @@ export const App = () => {
 
                     <a href="#expertise">
                       <button class="d-md-none btn btn-light btn-sm">
-                        Learn more <i className="bi-arrow-right"></i>
+                        Learn more<i className="bi-arrow-right ps-1"></i>
                       </button>
                       <button class="d-none d-md-inline-flex d-xl-none btn btn-light me-3">
-                        Learn more <i className="bi-arrow-right"></i>
+                        Learn more <i className="bi-arrow-right ps-1"></i>
                       </button>
                       <button class="d-none d-xl-inline-flex btn btn-lg btn-light me-3">
-                        Learn more <i className="bi-arrow-right"></i>
+                        Learn more <i className="bi-arrow-right ps-1"></i>
                       </button>
                     </a>
                   </div>
