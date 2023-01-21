@@ -92,7 +92,7 @@ export const App = () => {
               </div>
             </div>
           </div>
-          <div class="col-sm-6 d-flex align-items-center p-0 mb-3">
+          <div class="col-sm-6 d-flex align-items-center mb-3 pe-2 ps-0">
             <img
               className="img-fluid"
               src={MAIN_IMG}
