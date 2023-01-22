@@ -5,6 +5,7 @@ const { body, validationResult } = require("express-validator");
 
 /* GET home page. */
 router.post("/", [
+  // validate and sanitize form body
   body("firstname", "First name must not be empty.")
     .trim()
     .isLength({ min: 1 })

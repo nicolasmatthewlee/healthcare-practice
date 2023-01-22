@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap";
+import { useState } from "react";
 
 import "./overide.css";
 
@@ -15,6 +16,39 @@ import AREAS_IMG from "./assets/areas.png";
 import CONTACT_IMG from "./assets/contact.png";
 
 export const App = () => {
+  const [firstname, setFirstname] = useState("Jimmy");
+  const [lastname, setLastname] = useState("Summers");
+  const [email, setEmail] = useState("jimmysummers@gmail.com");
+  const [phone, setPhone] = useState("310-456-1234");
+  const [availability, setAvailability] = useState("afternoon");
+  const [message, setMessage] = useState(
+    "Hi I would like to set up an appointment."
+  );
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("http://127.0.0.1:8000", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstname,
+          lastname,
+          email,
+          phone,
+          availability,
+          message,
+        }),
+      });
+    } catch (error) {
+      console.log("AN ERROR OCCURED");
+    }
+  };
+
   return (
     <div className="App">
       <div className="container-fluid p-0">
@@ -530,6 +564,8 @@ export const App = () => {
                   id="firstname"
                   required
                   value="Jimmy"
+                  name="firstname"
+                  onChange={(e) => setFirstname(e.target.value)}
                 />
               </div>
               <div className="col-6">
@@ -543,6 +579,8 @@ export const App = () => {
                   id="lastname"
                   required
                   value="Summers"
+                  name="lastname"
+                  onChange={(e) => setLastname(e.target.value)}
                 />
               </div>
             </div>
@@ -558,6 +596,8 @@ export const App = () => {
                   id="email"
                   required
                   value="jimmysummers@gmail.com"
+                  name="email"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="col-6">
@@ -571,6 +611,8 @@ export const App = () => {
                   id="phone"
                   required
                   value="310-456-1234"
+                  name="phone"
+                  onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
             </div>
@@ -584,6 +626,8 @@ export const App = () => {
                         type="checkbox"
                         className="form-check-input"
                         id="morning"
+                        name="morning"
+                        onChange={(e) => setAvailability(e.target.name)}
                       />
                       <label htmlFor="morning" className="form-check-label">
                         Morning
@@ -597,6 +641,8 @@ export const App = () => {
                         className="form-check-input"
                         id="afternoon"
                         checked
+                        name="afternoon"
+                        onChange={(e) => setAvailability(e.target.name)}
                       />
                       <label htmlFor="afternoon" className="form-check-label">
                         Afternoon
@@ -609,6 +655,8 @@ export const App = () => {
                         type="checkbox"
                         className="form-check-input"
                         id="evening"
+                        name="evening"
+                        onChange={(e) => setAvailability(e.target.name)}
                       />
                       <label htmlFor="evening" className="form-check-label">
                         Evening
@@ -621,6 +669,8 @@ export const App = () => {
                         type="checkbox"
                         className="form-check-input"
                         id="emailpreferred"
+                        name="emailpreferred"
+                        onChange={(e) => setAvailability(e.target.name)}
                       />
                       <label
                         htmlFor="emailpreferred"
@@ -645,12 +695,19 @@ export const App = () => {
                   id="message"
                   required
                   value="Hi I would like to set up an appointment."
+                  name="message"
+                  onChange={(e) => setMessage(e.target.value)}
                 />
               </div>
             </div>
             <div className="row">
               <div className="col-auto">
-                <button className="btn btn-warning w-100">Submit</button>
+                <button
+                  className="btn btn-warning w-100"
+                  onClick={handleSubmit}
+                >
+                  Submit
+                </button>
               </div>
             </div>
           </form>
