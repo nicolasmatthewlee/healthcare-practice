@@ -520,27 +520,27 @@ export const App = () => {
           >
             <div className="row mb-3">
               <div className="col-6">
-                <label htmlFor="first-name" className="form-label">
+                <label htmlFor="firstname" className="form-label">
                   First name
                 </label>
                 <input
                   type="text"
                   className="form-control"
                   placeholder="First name"
-                  id="first-name"
+                  id="firstname"
                   required
                   value="Jimmy"
                 />
               </div>
               <div className="col-6">
-                <label htmlFor="last-name" className="form-label">
+                <label htmlFor="lastname" className="form-label">
                   Last name
                 </label>
                 <input
                   type="text"
                   className="form-control"
                   placeholder="Last name"
-                  id="last-name"
+                  id="lastname"
                   required
                   value="Summers"
                 />
@@ -620,10 +620,10 @@ export const App = () => {
                       <input
                         type="checkbox"
                         className="form-check-input"
-                        id="email-preferred"
+                        id="emailpreferred"
                       />
                       <label
-                        htmlFor="email-preferred"
+                        htmlFor="emailpreferred"
                         className="form-check-label"
                       >
                         I prefer to be emailed
