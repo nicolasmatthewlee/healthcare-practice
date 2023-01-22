@@ -514,7 +514,7 @@ export const App = () => {
         <div className="row">
           <form
             className="col-md-6 bg-light border p-4 rounded"
-            action="mailto:nicolasmatthewlee@gmail.com"
+            action="http://127.0.0.1:8000/"
             method="post"
             encType="text/plain"
           >
@@ -529,6 +529,7 @@ export const App = () => {
                   placeholder="First name"
                   id="first-name"
                   required
+                  value="Jimmy"
                 />
               </div>
               <div className="col-6">
@@ -541,6 +542,7 @@ export const App = () => {
                   placeholder="Last name"
                   id="last-name"
                   required
+                  value="Summers"
                 />
               </div>
             </div>
@@ -555,6 +557,7 @@ export const App = () => {
                   placeholder="Email"
                   id="email"
                   required
+                  value="jimmysummers@gmail.com"
                 />
               </div>
               <div className="col-6">
@@ -567,6 +570,7 @@ export const App = () => {
                   placeholder="(123)-456-7890"
                   id="phone"
                   required
+                  value="310-456-1234"
                 />
               </div>
             </div>
@@ -592,6 +596,7 @@ export const App = () => {
                         type="checkbox"
                         className="form-check-input"
                         id="afternoon"
+                        checked
                       />
                       <label htmlFor="afternoon" className="form-check-label">
                         Afternoon
@@ -639,6 +644,7 @@ export const App = () => {
                   placeholder="Your message here..."
                   id="message"
                   required
+                  value="Hi I would like to set up an appointment."
                 />
               </div>
             </div>
