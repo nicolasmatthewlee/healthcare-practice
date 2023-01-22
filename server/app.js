@@ -6,6 +6,10 @@ var logger = require("morgan");
 
 var indexRouter = require("./routes/index");
 
+// load environment variables
+const dotenv = require("dotenv");
+dotenv.config();
+
 // required to receive POST data from client
 const cors = require("cors");
 var app = express();
