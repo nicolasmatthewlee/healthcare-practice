@@ -512,7 +512,12 @@ export const App = () => {
         </div>
 
         <div className="row">
-          <form className="col-md-6 bg-light border p-4 rounded" action="#">
+          <form
+            className="col-md-6 bg-light border p-4 rounded"
+            action="mailto:nicolasmatthewlee@gmail.com"
+            method="post"
+            encType="text/plain"
+          >
             <div className="row mb-3">
               <div className="col-6">
                 <label htmlFor="first-name" className="form-label">
@@ -523,6 +528,7 @@ export const App = () => {
                   className="form-control"
                   placeholder="First name"
                   id="first-name"
+                  required
                 />
               </div>
               <div className="col-6">
@@ -534,6 +540,7 @@ export const App = () => {
                   className="form-control"
                   placeholder="Last name"
                   id="last-name"
+                  required
                 />
               </div>
             </div>
@@ -547,6 +554,7 @@ export const App = () => {
                   className="form-control"
                   placeholder="Email"
                   id="email"
+                  required
                 />
               </div>
               <div className="col-6">
@@ -558,6 +566,7 @@ export const App = () => {
                   className="form-control"
                   placeholder="(123)-456-7890"
                   id="phone"
+                  required
                 />
               </div>
             </div>
@@ -629,6 +638,7 @@ export const App = () => {
                   className="form-control"
                   placeholder="Your message here..."
                   id="message"
+                  required
                 />
               </div>
             </div>
