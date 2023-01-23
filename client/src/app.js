@@ -17,7 +17,7 @@ import CONTACT_IMG from "./assets/contact.png";
 
 export const App = () => {
   const [firstname, setFirstname] = useState("Jimmy");
-  const [lastname, setLastname] = useState("Summers");
+  const [lastname, setLastname] = useState("adfs");
   const [email, setEmail] = useState("jimmy.Summers@gmail.com");
   const [phone, setPhone] = useState("310-456-1234");
   const [availability, setAvailability] = useState("afternoon");
@@ -50,11 +50,19 @@ export const App = () => {
         }),
       });
 
-      // get email and save to email
-      const submittedEmail = await response.json();
-      setEmail(submittedEmail);
+      const responseJSON = await response.json();
+      if (responseJSON.succeeded === true) {
+        // success
 
-      setSubmissionSuccess(true);
+        // get email and save to email
+        setEmail(responseJSON.email);
+        setSubmissionSuccess(true);
+      } else if (responseJSON.succeeded === false) {
+        // form validation failed
+        console.log(responseJSON.errors);
+      } else {
+        throw Error;
+      }
     } catch (error) {
       console.log(
         "An error occurred. Please try again or contact us directly at 310-456-1234."

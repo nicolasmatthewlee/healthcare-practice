@@ -47,8 +47,7 @@ router.post("/", [
     const errors = validationResult(req);
     console.log(errors);
     if (!errors.isEmpty())
-      // 400 indicates server will not process the request due to a perceived client error
-      return res.status(400).json({ errors: errors.array() });
+      return res.status(200).json({ succeeded: false, errors: errors.array() });
 
     // no validation errors
     // create email transporter
@@ -83,7 +82,7 @@ router.post("/", [
     });
 
     // send response with email
-    res.status(200).json(req.body.email);
+    res.status(200).json({ succeeded: true, email: req.body.email });
   },
 ]);
 
