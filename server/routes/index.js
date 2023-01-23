@@ -79,7 +79,7 @@ router.post("/", [
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         console.log(error);
-        throw Error;
+        res.end();
       } else {
         res.status(200).json({ succeeded: true, email: req.body.email });
       }
