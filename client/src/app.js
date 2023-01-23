@@ -25,8 +25,12 @@ export const App = () => {
     "Hi I would like to set up an appointment."
   );
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setIsLoading(true);
 
     try {
       const response = await fetch("http://127.0.0.1:8000", {
@@ -47,6 +51,8 @@ export const App = () => {
     } catch (error) {
       console.log("AN ERROR OCCURED");
     }
+
+    setIsLoading(false);
   };
 
   return (
@@ -702,12 +708,19 @@ export const App = () => {
             </div>
             <div className="row">
               <div className="col-auto">
-                <button
-                  className="btn btn-warning w-100"
-                  onClick={handleSubmit}
-                >
-                  Submit
-                </button>
+                {isLoading ? (
+                  <button className="btn btn-warning" disabled>
+                    <span className="spinner-border spinner-border-sm"></span>{" "}
+                    Loading...
+                  </button>
+                ) : (
+                  <button
+                    className="btn btn-warning w-100"
+                    onClick={handleSubmit}
+                  >
+                    Submit
+                  </button>
+                )}
               </div>
             </div>
           </form>
