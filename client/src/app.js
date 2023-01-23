@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap";
 import { useState } from "react";
+import uniqid from "uniqid";
 
 import "./overide.css";
 
@@ -16,17 +17,16 @@ import AREAS_IMG from "./assets/areas.png";
 import CONTACT_IMG from "./assets/contact.png";
 
 export const App = () => {
-  const [firstname, setFirstname] = useState("Jimmy");
-  const [lastname, setLastname] = useState("adfs");
-  const [email, setEmail] = useState("jimmy.Summers@gmail.com");
-  const [phone, setPhone] = useState("310-456-1234");
-  const [availability, setAvailability] = useState("afternoon");
-  const [message, setMessage] = useState(
-    "Hi I would like to set up an appointment."
-  );
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("jimmy.Summers@gmasdfail");
+  const [phone, setPhone] = useState("310-4510923851230946-1234");
+  const [availability, setAvailability] = useState("");
+  const [message, setMessage] = useState();
 
   const [isLoading, setIsLoading] = useState(false);
   const [submissionSuccess, setSubmissionSuccess] = useState(false);
+  const [formErrors, setFormErrors] = useState([]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -53,20 +53,21 @@ export const App = () => {
       const responseJSON = await response.json();
       if (responseJSON.succeeded === true) {
         // success
-
         // get email and save to email
         setEmail(responseJSON.email);
         setSubmissionSuccess(true);
       } else if (responseJSON.succeeded === false) {
         // form validation failed
-        console.log(responseJSON.errors);
+        setFormErrors(responseJSON.errors);
       } else {
         throw Error;
       }
     } catch (error) {
-      console.log(
-        "An error occurred. Please try again or contact us directly at 310-456-1234."
-      );
+      setFormErrors([
+        {
+          msg: "An error occurred. Please try again or contact us directly at 310-456-1234.",
+        },
+      ]);
     }
 
     setIsLoading(false);
@@ -731,6 +732,23 @@ export const App = () => {
                   />
                 </div>
               </div>
+
+              {formErrors.length > 0 ? (
+                <div className="row mb-3">
+                  <div className="col">
+                    <ul className="list-group">
+                      <li className="list-group-item list-group-item-danger">
+                        <ul className="ps-3" style={{ listStyleType: "disc" }}>
+                          {formErrors.map((e) => (
+                            <li key={uniqid()}>{e.msg}</li>
+                          ))}
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              ) : null}
+
               <div className="row">
                 <div className="col-auto">
                   {isLoading ? (
