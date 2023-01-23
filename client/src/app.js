@@ -17,12 +17,12 @@ import AREAS_IMG from "./assets/areas.png";
 import CONTACT_IMG from "./assets/contact.png";
 
 export const App = () => {
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("jimmy.Summers@gmasdfail");
-  const [phone, setPhone] = useState("310-4510923851230946-1234");
+  const [firstname, setFirstname] = useState("nathan");
+  const [lastname, setLastname] = useState("red");
+  const [email, setEmail] = useState("jimmy.Summers@gmasdfail.com");
+  const [phone, setPhone] = useState("310-346-1234");
   const [availability, setAvailability] = useState("");
-  const [message, setMessage] = useState();
+  const [message, setMessage] = useState("Hello");
 
   const [isLoading, setIsLoading] = useState(false);
   const [submissionSuccess, setSubmissionSuccess] = useState(false);

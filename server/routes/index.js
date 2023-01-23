@@ -45,7 +45,6 @@ router.post("/", [
   (req, res, next) => {
     // finds validation errors and wraps
     const errors = validationResult(req);
-    console.log(errors);
     if (!errors.isEmpty())
       return res.status(200).json({ succeeded: false, errors: errors.array() });
 
@@ -75,14 +74,16 @@ router.post("/", [
       \n**Message:** ${req.body.message}
       \n>`,
     };
+
     // send mail
     transporter.sendMail(mailOptions, (error, info) => {
-      if (error) console.log(error);
-      else console.log("Email sent: " + info.response);
+      if (error) {
+        console.log(error);
+        throw Error;
+      } else {
+        res.status(200).json({ succeeded: true, email: req.body.email });
+      }
     });
-
-    // send response with email
-    res.status(200).json({ succeeded: true, email: req.body.email });
   },
 ]);
 
