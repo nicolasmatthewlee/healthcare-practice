@@ -18,7 +18,7 @@ import CONTACT_IMG from "./assets/contact.png";
 export const App = () => {
   const [firstname, setFirstname] = useState("Jimmy");
   const [lastname, setLastname] = useState("Summers");
-  const [email, setEmail] = useState("jimmysummers@gmail.com");
+  const [email, setEmail] = useState("jimmy.Summers@gmail.com");
   const [phone, setPhone] = useState("310-456-1234");
   const [availability, setAvailability] = useState("afternoon");
   const [message, setMessage] = useState(
@@ -49,10 +49,16 @@ export const App = () => {
           message,
         }),
       });
-      // setEmail
+
+      // get email and save to email
+      const submittedEmail = await response.json();
+      setEmail(submittedEmail);
+
       setSubmissionSuccess(true);
     } catch (error) {
-      console.log("AN ERROR OCCURED");
+      console.log(
+        "An error occurred. Please try again or contact us directly at 310-456-1234."
+      );
     }
 
     setIsLoading(false);

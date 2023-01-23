@@ -51,8 +51,6 @@ router.post("/", [
       return res.status(400).json({ errors: errors.array() });
 
     // no validation errors
-    console.log(req.body);
-
     // create email transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -84,7 +82,8 @@ router.post("/", [
       else console.log("Email sent: " + info.response);
     });
 
-    res.end();
+    // send response with email
+    res.status(200).json(req.body.email);
   },
 ]);
 
