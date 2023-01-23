@@ -26,6 +26,7 @@ export const App = () => {
   );
 
   const [isLoading, setIsLoading] = useState(false);
+  const [submissionSuccess, setSubmissionSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -48,6 +49,8 @@ export const App = () => {
           message,
         }),
       });
+      // setEmail
+      setSubmissionSuccess(true);
     } catch (error) {
       console.log("AN ERROR OCCURED");
     }
@@ -552,178 +555,187 @@ export const App = () => {
         </div>
 
         <div className="row">
-          <form
-            className="col-md-6 bg-light border p-4 rounded"
-            action="http://127.0.0.1:8000/"
-            method="post"
-            encType="text/plain"
-          >
-            <div className="row mb-3">
-              <div className="col-6">
-                <label htmlFor="firstname" className="form-label">
-                  First name
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="First name"
-                  id="firstname"
-                  required
-                  value="Jimmy"
-                  name="firstname"
-                  onChange={(e) => setFirstname(e.target.value)}
-                />
-              </div>
-              <div className="col-6">
-                <label htmlFor="lastname" className="form-label">
-                  Last name
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Last name"
-                  id="lastname"
-                  required
-                  value="Summers"
-                  name="lastname"
-                  onChange={(e) => setLastname(e.target.value)}
-                />
-              </div>
+          {submissionSuccess ? (
+            <div className="col-md-6 bg-light border p-4 rounded">
+              <h1>Submission received.</h1>
+              <p>
+                Confirmation email sent to <b>{email}</b>
+              </p>
             </div>
-            <div className="row mb-3">
-              <div className="col-6">
-                <label htmlFor="email" className="form-label">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="form-control"
-                  placeholder="Email"
-                  id="email"
-                  required
-                  value="jimmysummers@gmail.com"
-                  name="email"
-                  onChange={(e) => setEmail(e.target.value)}
-                />
+          ) : (
+            <form
+              className="col-md-6 bg-light border p-4 rounded"
+              action="http://127.0.0.1:8000/"
+              method="post"
+              encType="text/plain"
+            >
+              <div className="row mb-3">
+                <div className="col-6">
+                  <label htmlFor="firstname" className="form-label">
+                    First name
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="First name"
+                    id="firstname"
+                    required
+                    value="Jimmy"
+                    name="firstname"
+                    onChange={(e) => setFirstname(e.target.value)}
+                  />
+                </div>
+                <div className="col-6">
+                  <label htmlFor="lastname" className="form-label">
+                    Last name
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Last name"
+                    id="lastname"
+                    required
+                    value="Summers"
+                    name="lastname"
+                    onChange={(e) => setLastname(e.target.value)}
+                  />
+                </div>
               </div>
-              <div className="col-6">
-                <label htmlFor="phone" className="form-label">
-                  Phone
-                </label>
-                <input
-                  type="tel"
-                  className="form-control"
-                  placeholder="(123)-456-7890"
-                  id="phone"
-                  required
-                  value="310-456-1234"
-                  name="phone"
-                  onChange={(e) => setPhone(e.target.value)}
-                />
+              <div className="row mb-3">
+                <div className="col-6">
+                  <label htmlFor="email" className="form-label">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    placeholder="Email"
+                    id="email"
+                    required
+                    value="jimmysummers@gmail.com"
+                    name="email"
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div className="col-6">
+                  <label htmlFor="phone" className="form-label">
+                    Phone
+                  </label>
+                  <input
+                    type="tel"
+                    className="form-control"
+                    placeholder="(123)-456-7890"
+                    id="phone"
+                    required
+                    value="310-456-1234"
+                    name="phone"
+                    onChange={(e) => setPhone(e.target.value)}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="row mb-3">
-              <div className="col">
-                <p className="form-label">Availability for call</p>
-                <div className="row">
-                  <div className="col-12">
-                    <div className="form-check">
-                      <input
-                        type="checkbox"
-                        className="form-check-input"
-                        id="morning"
-                        name="morning"
-                        onChange={(e) => setAvailability(e.target.name)}
-                      />
-                      <label htmlFor="morning" className="form-check-label">
-                        Morning
-                      </label>
+              <div className="row mb-3">
+                <div className="col">
+                  <p className="form-label">Availability for call</p>
+                  <div className="row">
+                    <div className="col-12">
+                      <div className="form-check">
+                        <input
+                          type="checkbox"
+                          className="form-check-input"
+                          id="morning"
+                          name="morning"
+                          onChange={(e) => setAvailability(e.target.name)}
+                        />
+                        <label htmlFor="morning" className="form-check-label">
+                          Morning
+                        </label>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-12">
-                    <div className="form-check">
-                      <input
-                        type="checkbox"
-                        className="form-check-input"
-                        id="afternoon"
-                        checked
-                        name="afternoon"
-                        onChange={(e) => setAvailability(e.target.name)}
-                      />
-                      <label htmlFor="afternoon" className="form-check-label">
-                        Afternoon
-                      </label>
+                    <div className="col-12">
+                      <div className="form-check">
+                        <input
+                          type="checkbox"
+                          className="form-check-input"
+                          id="afternoon"
+                          checked
+                          name="afternoon"
+                          onChange={(e) => setAvailability(e.target.name)}
+                        />
+                        <label htmlFor="afternoon" className="form-check-label">
+                          Afternoon
+                        </label>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-12">
-                    <div className="form-check">
-                      <input
-                        type="checkbox"
-                        className="form-check-input"
-                        id="evening"
-                        name="evening"
-                        onChange={(e) => setAvailability(e.target.name)}
-                      />
-                      <label htmlFor="evening" className="form-check-label">
-                        Evening
-                      </label>
+                    <div className="col-12">
+                      <div className="form-check">
+                        <input
+                          type="checkbox"
+                          className="form-check-input"
+                          id="evening"
+                          name="evening"
+                          onChange={(e) => setAvailability(e.target.name)}
+                        />
+                        <label htmlFor="evening" className="form-check-label">
+                          Evening
+                        </label>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-12">
-                    <div className="form-check mt-3">
-                      <input
-                        type="checkbox"
-                        className="form-check-input"
-                        id="emailpreferred"
-                        name="emailpreferred"
-                        onChange={(e) => setAvailability(e.target.name)}
-                      />
-                      <label
-                        htmlFor="emailpreferred"
-                        className="form-check-label"
-                      >
-                        I prefer to be emailed
-                      </label>
+                    <div className="col-12">
+                      <div className="form-check mt-3">
+                        <input
+                          type="checkbox"
+                          className="form-check-input"
+                          id="emailpreferred"
+                          name="emailpreferred"
+                          onChange={(e) => setAvailability(e.target.name)}
+                        />
+                        <label
+                          htmlFor="emailpreferred"
+                          className="form-check-label"
+                        >
+                          I prefer to be emailed
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="row mb-3">
-              <div className="col">
-                <label htmlFor="message" className="form-label">
-                  Message
-                </label>
-                <textarea
-                  rows="3"
-                  className="form-control"
-                  placeholder="Your message here..."
-                  id="message"
-                  required
-                  value="Hi I would like to set up an appointment."
-                  name="message"
-                  onChange={(e) => setMessage(e.target.value)}
-                />
+              <div className="row mb-3">
+                <div className="col">
+                  <label htmlFor="message" className="form-label">
+                    Message
+                  </label>
+                  <textarea
+                    rows="3"
+                    className="form-control"
+                    placeholder="Your message here..."
+                    id="message"
+                    required
+                    value="Hi I would like to set up an appointment."
+                    name="message"
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="row">
-              <div className="col-auto">
-                {isLoading ? (
-                  <button className="btn btn-warning" disabled>
-                    <span className="spinner-border spinner-border-sm"></span>{" "}
-                    Loading...
-                  </button>
-                ) : (
-                  <button
-                    className="btn btn-warning w-100"
-                    onClick={handleSubmit}
-                  >
-                    Submit
-                  </button>
-                )}
+              <div className="row">
+                <div className="col-auto">
+                  {isLoading ? (
+                    <button className="btn btn-warning" disabled>
+                      <span className="spinner-border spinner-border-sm"></span>{" "}
+                      Loading...
+                    </button>
+                  ) : (
+                    <button
+                      className="btn btn-warning w-100"
+                      onClick={handleSubmit}
+                    >
+                      Submit
+                    </button>
+                  )}
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
+          )}
 
           <div className="d-none d-md-flex col-md-6 align-items-end">
             <img
