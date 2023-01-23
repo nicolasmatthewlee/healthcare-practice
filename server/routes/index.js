@@ -36,6 +36,7 @@ router.post("/", [
     .escape(),
   body("availability", "Please select a contact preference.")
     .trim()
+    .isLength({ min: 1 })
     .isLength({ max: 100 })
     .escape(),
   body("message", "Message must not be empty.")

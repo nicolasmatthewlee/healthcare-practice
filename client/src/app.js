@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import uniqid from "uniqid";
 
 import "./overide.css";
@@ -21,12 +21,33 @@ export const App = () => {
   const [lastname, setLastname] = useState("red");
   const [email, setEmail] = useState("jimmy.Summers@gmasdfail.com");
   const [phone, setPhone] = useState("310-346-1234");
+
   const [availability, setAvailability] = useState("");
+  const [morningAvailability, setMorningAvailability] = useState(false);
+  const [afternoonAvailability, setAfternoonAvailability] = useState(false);
+  const [eveningAvailability, setEveningAvailability] = useState(false);
+  const [emailPreference, setEmailPreference] = useState(false);
+
   const [message, setMessage] = useState("Hello");
 
   const [isLoading, setIsLoading] = useState(false);
   const [submissionSuccess, setSubmissionSuccess] = useState(false);
   const [formErrors, setFormErrors] = useState([]);
+
+  useEffect(() => {
+    let availabilityList = [];
+    if (morningAvailability) availabilityList.push("morning");
+    if (afternoonAvailability) availabilityList.push("afternoon");
+    if (eveningAvailability) availabilityList.push("evening");
+    if (emailPreference) availabilityList.push("email");
+
+    setAvailability(availabilityList.join(", "));
+  }, [
+    morningAvailability,
+    afternoonAvailability,
+    eveningAvailability,
+    emailPreference,
+  ]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -659,7 +680,9 @@ export const App = () => {
                           className="form-check-input"
                           id="morning"
                           name="morning"
-                          onChange={(e) => setAvailability(e.target.name)}
+                          onChange={(e) =>
+                            setMorningAvailability(e.target.checked)
+                          }
                         />
                         <label htmlFor="morning" className="form-check-label">
                           Morning
@@ -672,9 +695,10 @@ export const App = () => {
                           type="checkbox"
                           className="form-check-input"
                           id="afternoon"
-                          checked
                           name="afternoon"
-                          onChange={(e) => setAvailability(e.target.name)}
+                          onChange={(e) =>
+                            setAfternoonAvailability(e.target.checked)
+                          }
                         />
                         <label htmlFor="afternoon" className="form-check-label">
                           Afternoon
@@ -688,7 +712,9 @@ export const App = () => {
                           className="form-check-input"
                           id="evening"
                           name="evening"
-                          onChange={(e) => setAvailability(e.target.name)}
+                          onChange={(e) =>
+                            setEveningAvailability(e.target.checked)
+                          }
                         />
                         <label htmlFor="evening" className="form-check-label">
                           Evening
@@ -702,7 +728,7 @@ export const App = () => {
                           className="form-check-input"
                           id="emailpreferred"
                           name="emailpreferred"
-                          onChange={(e) => setAvailability(e.target.name)}
+                          onChange={(e) => setEmailPreference(e.target.checked)}
                         />
                         <label
                           htmlFor="emailpreferred"
