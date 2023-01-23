@@ -55,21 +55,24 @@ export const App = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstname,
-          lastname,
-          email,
-          phone,
-          availability,
-          message,
-        }),
-      });
+      const response = await fetch(
+        "https://professional-site-xmnn2.ondigitalocean.app/",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstname,
+            lastname,
+            email,
+            phone,
+            availability,
+            message,
+          }),
+        }
+      );
 
       const responseJSON = await response.json();
       if (responseJSON.succeeded === true) {
@@ -601,7 +604,6 @@ export const App = () => {
           ) : (
             <form
               className="col-md-6 bg-light border p-4 rounded"
-              action="http://127.0.0.1:8000/"
               method="post"
               encType="text/plain"
             >
