@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 
 const nodemailer = require("nodemailer");
+const markdown = require("nodemailer-markdown").markdown;
 
 const { body, validationResult } = require("express-validator");
 
@@ -58,12 +59,24 @@ router.post("/", [
       auth: { user: process.env.EMAIL, pass: process.env.PASSWORD },
     });
 
+    transporter.use("compile", markdown());
+
     // set message options
     const mailOptions = {
       from: process.env.Email,
       to: "nicolaslee2017@gmail.com",
       subject: "Your Message to PsychCorp",
-      text: `Name: ${req.body.lastname}, ${req.body.firstname}\nEmail: ${req.body.email}\nPhone: ${req.body.phone}\nAvailability: ${req.body.availability}\nMessage:\n${req.body.message}`,
+      markdown: `## Thanks for contacting us.
+      \n*We'll get back to you as soon as we can.*
+      \n---
+      \n## Submission Information
+      \n>
+      \n**Name:** ${req.body.lastname}, ${req.body.firstname}
+      \n**Email:** ${req.body.email}
+      \n**Phone:** ${req.body.phone}
+      \n**Availability:** ${req.body.availability}
+      \n**Message:** ${req.body.message}
+      \n>`,
     };
     // send mail
     transporter.sendMail(mailOptions, (error, info) => {
