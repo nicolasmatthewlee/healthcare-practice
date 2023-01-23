@@ -61,7 +61,7 @@ router.post("/", [
     // set message options
     const mailOptions = {
       from: process.env.Email,
-      to: "nicolaslee2017@gmail.com",
+      to: req.body.email,
       subject: "Your Message to PsychCorp",
       markdown: `## Thanks for contacting us.
       \n*We'll get back to you as soon as we can.*
