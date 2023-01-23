@@ -17,10 +17,10 @@ import AREAS_IMG from "./assets/areas.png";
 import CONTACT_IMG from "./assets/contact.png";
 
 export const App = () => {
-  const [firstname, setFirstname] = useState("nathan");
-  const [lastname, setLastname] = useState("red");
-  const [email, setEmail] = useState("jimmy.Summers@gmasdfail.com");
-  const [phone, setPhone] = useState("310-346-1234");
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
 
   const [availability, setAvailability] = useState("");
   const [morningAvailability, setMorningAvailability] = useState(false);
@@ -28,7 +28,7 @@ export const App = () => {
   const [eveningAvailability, setEveningAvailability] = useState(false);
   const [emailPreference, setEmailPreference] = useState(false);
 
-  const [message, setMessage] = useState("Hello");
+  const [message, setMessage] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
   const [submissionSuccess, setSubmissionSuccess] = useState(false);
@@ -616,7 +616,6 @@ export const App = () => {
                     placeholder="First name"
                     id="firstname"
                     required
-                    value="Jimmy"
                     name="firstname"
                     onChange={(e) => setFirstname(e.target.value)}
                   />
@@ -631,7 +630,6 @@ export const App = () => {
                     placeholder="Last name"
                     id="lastname"
                     required
-                    value="Summers"
                     name="lastname"
                     onChange={(e) => setLastname(e.target.value)}
                   />
@@ -648,7 +646,6 @@ export const App = () => {
                     placeholder="Email"
                     id="email"
                     required
-                    value="jimmysummers@gmail.com"
                     name="email"
                     onChange={(e) => setEmail(e.target.value)}
                   />
@@ -663,7 +660,6 @@ export const App = () => {
                     placeholder="(123)-456-7890"
                     id="phone"
                     required
-                    value="310-456-1234"
                     name="phone"
                     onChange={(e) => setPhone(e.target.value)}
                   />
@@ -752,7 +748,6 @@ export const App = () => {
                     placeholder="Your message here..."
                     id="message"
                     required
-                    value="Hi I would like to set up an appointment."
                     name="message"
                     onChange={(e) => setMessage(e.target.value)}
                   />
