@@ -443,7 +443,7 @@ export const App = () => {
             <div className="card mb-3 h-100">
               <img src={PROFILE_IMG2} alt="" className="card-img-top" />
               <div className="card-body d-flex flex-column">
-                <h3 className="card-title">Dr. Ethan Reading</h3>
+                <h4 className="card-title">Dr. Ethan Reading</h4>
                 <p className="card-text mb-0">
                   <b>MD, PsyD</b> <br /> Psychiatrist
                 </p>
@@ -470,7 +470,7 @@ export const App = () => {
             <div className="card mb-3 h-100">
               <img src={PROFILE_IMG4} alt="" className="card-img-top" />
               <div className="card-body d-flex flex-column">
-                <h3 className="card-title">Dr. Elizabeth Green</h3>
+                <h4 className="card-title">Dr. Elizabeth Green</h4>
                 <p className="card-text mb-0">
                   <b>MD, PhD</b> <br /> Psychologist
                 </p>
@@ -496,7 +496,7 @@ export const App = () => {
             <div className="card mb-3 h-100">
               <img src={PROFILE_IMG3} alt="" className="card-img-top" />
               <div className="card-body d-flex flex-column">
-                <h3 className="card-title">Dr. Nathan Lee</h3>
+                <h4 className="card-title">Dr. Nathan Lee</h4>
                 <p className="card-text mb-0">
                   <b>PsyD, PhD</b> <br /> Therapist, Nutritionist
                 </p>
@@ -522,7 +522,7 @@ export const App = () => {
             <div className="card mb-3 h-100">
               <img src={PROFILE_IMG5} alt="" className="card-img-top" />
               <div className="card-body d-flex flex-column">
-                <h3 className="card-title">Mrs. Isabel Pham</h3>
+                <h4 className="card-title">Mrs. Isabel Pham</h4>
                 <p className="card-text mb-0">
                   <b>Licensed MFT</b> <br /> Marriage and Family Therapist
                 </p>
@@ -557,7 +557,7 @@ export const App = () => {
         <div className="row">
           {submissionSuccess ? (
             <div className="col-md-6 bg-light border p-4 rounded">
-              <h1>Submission received.</h1>
+              <h1>Submission received</h1>
               <p>
                 Confirmation email sent to <b>{email}</b>
               </p>
