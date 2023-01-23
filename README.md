@@ -1,1 +1,1 @@
-Deployed at: https://professional-site-xmnn2.ondigitalocean.app/
+Deployed at: https://bit.ly/3QYtugI
