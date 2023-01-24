@@ -56,7 +56,7 @@ export const App = () => {
 
     try {
       const response = await fetch(
-        "https://professional-site-xmnn2.ondigitalocean.app/api",
+        "http://24.199.116.13/",
         {
           method: "POST",
           headers: {
