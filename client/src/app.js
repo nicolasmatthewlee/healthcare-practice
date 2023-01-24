@@ -56,7 +56,7 @@ export const App = () => {
 
     try {
       const response = await fetch(
-        "http://24.199.116.13/",
+        "http://24.199.116.13:8000",
         {
           method: "POST",
           headers: {
